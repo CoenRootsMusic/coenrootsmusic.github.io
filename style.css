@@ -231,9 +231,9 @@ a:hover{
   text-decoration-thickness: 1px;
   text-underline-offset: .5em;
 }
-/*a:visited{
-  color: black;
-}*/
+a:visited{
+  color: #9C2642;
+}
 .hidden-button-description {
   position: absolute;
   width: 1px;
@@ -271,7 +271,7 @@ figcaption {
 	font-size: 1.75em;
 	color: #dbc2a5;
 }
-.altFooter {
+.altFooter .fa{
 	color: black !important;
 }
 /* End Footer */
