@@ -112,6 +112,16 @@ p {
   font-family: Trebuchet MS, sans-serif;
   line-height: 2em;
 }
+.ribbon {
+  font-size: 2em;
+  color: #8f4c00;
+  font-family: Baskerville, serif;
+}
+.ribbon2 {
+  font-size: 1.75em;
+  color: #8f4c00;
+  font-family: Baskerville, serif;
+}
 /* End Text Styles */
 
 /* Layout */
@@ -254,6 +264,45 @@ a:visited{
 }
 .spotify {
 	color: black;
+}
+.ribbon {
+  --s: 2.2em; /* the ribbon size */
+  --d: .6em;  /* the depth */
+  --c: .8em;  /* the cutout part */
+  
+  padding: var(--d) calc(var(--s) + 2*var(--d) + .5em) 0;
+  line-height: 1.25em;
+  text-align: center;
+  background: 
+    linear-gradient(90deg,#92734f var(--d),#0000 0 calc(100% - var(--d)),#92734f 0) 
+     50% 100%/calc(100% - 2*(var(--s) + var(--d))) calc(100% - var(--d)),
+    conic-gradient(from -45deg at 50% 150%,#92734f 25%,#dbc2a5 0)
+     var(--s)              0/calc(3*var(--d)) var(--d),
+    conic-gradient(from -45deg at 50% 150%,#92734f 25%,#dbc2a5 0)
+     calc(100% - var(--s)) 0/calc(3*var(--d)) var(--d);
+  background-repeat: no-repeat;
+  background-color: #dbc2a5; /* the main color */
+  clip-path: polygon(0 100%,calc(var(--s) + var(--d)) 100%,calc(var(--s) + var(--d)) calc(100% - var(--d)),calc(var(--s) + 2*var(--d)) calc(100% - var(--d)),calc(var(--s) + 2*var(--d)) 100%,calc(100% - var(--s) - 2*var(--d)) 100%,calc(100% - var(--s) - 2*var(--d)) calc(100% - var(--d)),calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),calc(100% - var(--s) - var(--d)) 100%,100% 100%,calc(100% - var(--c)) calc(50% + var(--d)/2),100% var(--d),calc(100% - var(--s)) var(--d),calc(100% - var(--s)) 0,calc(100% - var(--s) - 3*var(--d)) 0,calc(100% - var(--s) - 3*var(--d)) var(--d),calc(var(--s) + 3*var(--d)) var(--d),calc(var(--s) + 3*var(--d)) 0,var(--s) 0,var(--s) var(--d),0 var(--d),var(--c) calc(50% + var(--d)/2));
+  width: fit-content;
+}
+.ribbon2 {
+  --s: 2.2em; /* the ribbon size */
+  --d: .6em;  /* the depth */
+  --c: .8em;  /* the cutout part */
+  
+  padding: 0 calc(var(--s) + 2*var(--d) + .5em) var(--d);
+  line-height: 1.25;
+  background: 
+    linear-gradient(90deg,#92734f var(--d),#0000 0 calc(100% - var(--d)),#92734f 0) 
+     50% 0/calc(100% - 2*(var(--s) + var(--d))) calc(100% - var(--d)),
+    conic-gradient(from 135deg at 50% -50%,#92734f 25%,#dbc2a5 0)
+     var(--s)              100%/calc(3*var(--d)) var(--d),
+    conic-gradient(from 135deg at 50% -50%,#92734f 25%,#dbc2a5 0)
+     calc(100% - var(--s)) 100%/calc(3*var(--d)) var(--d);
+  background-repeat: no-repeat;
+  background-color: #dbc2a5; /* the main color */
+  clip-path: polygon(0 0,calc(var(--s) + var(--d)) 0,calc(var(--s) + var(--d)) var(--d),calc(var(--s) + 2*var(--d)) var(--d),calc(var(--s) + 2*var(--d)) 0,calc(100% - var(--s) - 2*var(--d)) 0,calc(100% - var(--s) - 2*var(--d)) var(--d),calc(100% - var(--s) - var(--d)) var(--d),calc(100% - var(--s) - var(--d)) 0,100% 0,calc(100% - var(--c)) calc(50% - var(--d)/2),100% calc(100% - var(--d)),calc(100% - var(--s)) calc(100% - var(--d)),calc(100% - var(--s)) 100%,calc(100% - var(--s) - 3*var(--d)) 100%,calc(100% - var(--s) - 3*var(--d)) calc(100% - var(--d)),calc(var(--s) + 3*var(--d)) calc(100% - var(--d)),calc(var(--s) + 3*var(--d)) 100%,var(--s) 100%,var(--s) calc(100% - var(--d)),0 calc(100% - var(--d)),var(--c) calc(50% - var(--d)/2));
+  width: fit-content;
 }
 figure {
   text-align: right;
